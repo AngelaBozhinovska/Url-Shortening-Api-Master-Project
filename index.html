@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <!-- Character encoding and viewport settings for responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to Google Fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon for the website icon in browser tabs -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Title of the webpage -->
+  <title>Frontend Mentor | Shortly URL Shortening API Challenge</title>
+  
+  <!-- Link to external JavaScript file, deferring execution until the DOM is fully loaded -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- Hero section containing the main content and navigation -->
+  <section class="hero">
+    <header>
+      <!-- Main navigation bar -->
+      <nav>
+        <img src="images/logo.svg" alt="logo"> <!-- Logo for branding -->
+        <a href="#">Features</a> <!-- Navigation links -->
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+      </nav>
+      <!-- Secondary navigation for authentication actions -->
+      <nav>
+        <a href="#">Login</a>
+        <a class="cta-login" href="#">Sign Up</a>
+      </nav>
+      <!-- Menu icon for mobile navigation -->
+      <img class="icon-menu" id="menu-icon" src="images/icon-menu.svg" alt="icon-menu">
+    </header>
+
+    <!-- Mobile navigation menu, hidden by default -->
+    <div class="mobile-nav" id="mobile-nav">
+      <nav>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+        <hr>
+        <nav>
+          <a href="#">Login</a>
+          <a class="cta-login" href="#">Sign Up</a>
+        </nav>
+      </nav>
+    </div>
+    
+    <!-- Main content of the hero section -->
+    <main>
+      <div>
+        <h1>More than just shorter links</h1> <!-- Main heading -->
+        <p class="main-text">Build your brand’s recognition and get detailed insights on how your links are performing.</p> <!-- Subheading -->
+        <a class="cta-started" href="#">Get Started</a> <!-- Call-to-action button -->
+      </div>
+      <!-- Illustration to visually support the hero content -->
+      <img class="illustration-working" src="images/illustration-working.svg" alt="illustration-working">
+    </main>
+  </section>
+
+  <!-- Section for statistics and features of the service -->
+  <section class="section-statistics">
+    <div class="link-section">
+      <div class="link-converter">
+        <div class="input-div">
+          <input type="url" placeholder="Shorten a link here..."> <!-- Input field for the URL -->
+          <p id="error-message" class="hidden">Please add a link</p> <!-- Error message for invalid input -->
+        </div>
+        <button id="shorten-button">Shorten It!</button> <!-- Button to submit the URL for shortening -->
+      </div>
+      <div class="result-container hidden"></div> <!-- Container for displaying the shortened link, initially hidden -->
+    </div>
+
+    <div class="text">
+      <h2>Advanced Statistics</h2> <!-- Heading for the statistics section -->
+      <p>Track how your links are performing across the web with our advanced statistics dashboard.</p> <!-- Description of the statistics feature -->
+    </div>
+
+    <main>
+      <!-- Cards displaying features of the service -->
+      <div class="cards">
+        <img src="images/icon-brand-recognition.svg" alt="icon-brand-recognition"> <!-- Feature icon -->
+        <h3>Brand Recognition</h3> <!-- Feature heading -->
+        <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p> <!-- Feature description -->
+      </div>
+      <div class="cards card-1">
+        <img src="images/icon-detailed-records.svg" alt="icon-detailed-records"> <!-- Feature icon -->
+        <h3>Detailed Records</h3> <!-- Feature heading -->
+        <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p> <!-- Feature description -->
+      </div>
+      <div class="cards card-2">
+        <img src="images/icon-fully-customizable.svg" alt="icon-fully-customizable"> <!-- Feature icon -->
+        <h3>Fully Customizable</h3> <!-- Feature heading -->
+        <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p> <!-- Feature description -->
+      </div>
+    </main>
+  </section>
+
+  <!-- Call-to-action banner encouraging users to boost their links -->
+  <div class="banniere">
+    <h4>Boost your links today</h4> <!-- Banner heading -->
+    <a class="cta-started" href="#">Get Started</a> <!-- Call-to-action button -->
+  </div>
+
+  <!-- Footer section containing links and social media icons -->
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/logo.svg" alt="Shortly Logo"> <!-- Logo for the footer -->
+        </div>
+        <div class="footer-links">
+            <div class="features">
+                <h4>Features</h4> <!-- Features heading -->
+                <a href="#">Link Shortening</a> <!-- Link to feature details -->
+                <a href="#">Branded Links</a>
+                <a href="#">Analytics</a>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4> <!-- Resources heading -->
+                <a href="#">Blog</a> <!-- Link to blog -->
+                <a href="#">Developers</a> <!-- Link for developers -->
+                <a href="#">Support</a> <!-- Support link -->
+            </div>
+            <div class="company">
+                <h4>Company</h4> <!-- Company information heading -->
+                <a href="#">About</a> <!-- About page link -->
+                <a href="#">Our Team</a> <!-- Team page link -->
+                <a href="#">Careers</a> <!-- Careers page link -->
+                <a href="#">Contacts</a> <!-- Contact information link -->
+            </div>
+        </div>
+        <div class="footer-icons">
+            <!-- Social media icons for engagement -->
+            <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+            <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

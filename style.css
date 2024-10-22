@@ -1,0 +1,516 @@
+:root { 
+    /* Primary Colors */
+    --cyan: hsl(180, 66%, 49%); /* Main accent color */
+    --dark-violet: hsl(257, 27%, 26%); /* Dark background color */
+  
+    /* Secondary Color */
+    --red: hsl(0, 87%, 67%); /* Alert or attention color */
+  
+    /* Neutral Colors */
+    --gray: hsl(0, 0%, 75%); /* Light gray for text and backgrounds */
+    --color-white: hsl(0, 0%, 100%); /* White color */
+    --grayish-violet: hsl(257, 7%, 63%); /* Subtle grayish-violet for text */
+    --very-dark-blue: hsl(255, 11%, 22%); /* Very dark blue for text */
+    --very-dark-violet: hsl(260, 8%, 14%); /* Very dark violet for background */
+  
+    /* Typography */
+    --font-family: 'Poppins', sans-serif; /* Font family for the whole site */
+    --font-size-body: 18px; /* Base font size */
+    --font-weight-500: 500; /* Medium font weight */
+    --font-weight-700: 700; /* Bold font weight */
+}
+
+* {
+    font-family: var(--font-family); /* Apply font family to all elements */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-size: var(--font-size-body); /* Set base font size */
+    color: var(--very-dark-blue); /* Set default text color */
+}
+
+section, footer {
+    padding: 2rem 2rem 2rem 7rem; /* Padding for sections and footer */
+}
+
+header {
+    margin-bottom: 4rem; /* Space below header */
+    padding-right: 7rem; /* Padding on right side */
+}
+
+header, header nav, .hero main {
+    gap: 30px; /* Space between flex items */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items evenly */
+}
+
+a {
+    font-size: 0.9em; /* Base font size for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+header a {
+    color: var(--grayish-violet); /* Link color in header */
+}
+
+header a:hover {
+    color: var(--very-dark-blue); /* Hover color for header links */
+}
+
+.cta-login, .cta-started {
+    padding: 0.7rem 2rem; /* Padding for call-to-action buttons */
+    border-radius: 50px; /* Rounded corners */
+    color: var(--color-white); /* Text color for buttons */
+    background-color: var(--cyan); /* Background color for buttons */
+}
+
+.cta-login:hover, .cta-started:hover, button:hover {
+    background-color: hsl(180, 83%, 56%); /* Hover color for buttons */
+    color: var(--color-white); /* Text color on hover */
+}
+
+.hero main p {
+    margin-bottom: 2.5rem; /* Space below paragraphs in hero section */
+}
+
+.icon-menu {
+    height: 5vh; /* Height for icon menu */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.mobile-nav, .icon-menu {
+    display: none; /* Hide mobile navigation and icon menu by default */
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: var(--font-weight-700); /* Set font weight for headings */
+}
+
+h1 {
+    font-size: 3em; /* Font size for H1 */
+}
+
+h1, h2, h3 {
+    color: var(--very-dark-violet); /* Heading color */
+}
+
+h4, h5 {
+    color: var(--color-white); /* Subheading color */
+}
+
+h3 {
+    margin-top: 2.5rem; /* Space above H3 headings */
+}
+
+h4 {
+    font-size: 1.5em; /* Font size for H4 */
+}
+
+p {
+    color: var(--grayish-violet); /* Paragraph text color */
+}
+
+.hero main {
+    align-items: flex-start; /* Align items to the start */
+}
+
+.main-text {
+    width: 100%; /* Full width for main text */
+}
+
+.illustration-working {
+    left: 15%; /* Position of working illustration */
+    height: 65vh; /* Height of illustration */
+    position: relative; /* Relative positioning */
+}
+
+.link-section {
+    width: 90%; /* Width for link section */
+}
+
+.link-converter, .banniere {
+    padding: 2rem; /* Padding for link converter and banner */
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items at the start */
+    justify-content: center; /* Center items horizontally */
+    background-size: cover; /* Cover background image */
+    background-repeat: no-repeat; /* No repeat for background */
+    background-color: var(--dark-violet); /* Background color */
+    background-image: url('images/bg-shorten-desktop.svg'); /* Background image */
+}
+
+.input-div {
+    width: 100%; /* Full width for input div */
+    display: flex; /* Use flexbox */
+    align-items: flex-start; /* Align items at the start */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.link-converter {
+    align-items: flex-start; /* Align items to the start */
+    border-radius: 5px; /* Rounded corners */
+}
+
+input {
+    width: 90%; /* Width for input fields */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.8rem 2rem; /* Padding for input */
+}
+
+button {   
+    width: 20%; /* Width for buttons */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    font-size: 0.7em; /* Font size for buttons */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.8rem 2rem; /* Padding for buttons */
+    color: var(--color-white); /* Text color for buttons */
+    background-color: var(--cyan); /* Background color for buttons */
+    font-weight: var(--font-weight-500); /* Font weight for buttons */
+}
+
+.section-statistics {
+    background-color: hsl(0, 0%, 75%, 0.3); /* Light gray background with transparency for statistics section */
+}
+
+.section-statistics main {
+    gap: 20px; /* Space between items in statistics section */
+    height: 80vh; /* Height for statistics section */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.short-link {
+    color: var(--cyan); /* Color for short links */
+}
+
+.original-link {
+    color: var(--very-dark-blue); /* Color for original links */
+}
+
+.copy-button {
+    margin-left: 1rem; /* Space to the left of the copy button */
+}
+
+.copy-button.clicked {
+    background-color: var(--dark-violet) !important; /* Background color for clicked copy button */
+}
+
+.result-container {
+    display: flex; /* Use flexbox for layout */
+    font-size: 0.7em; /* Font size for result container */
+    align-items: center; /* Center items vertically */
+    padding: 0.5rem 1rem; /* Padding for result container */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.shortened-link {
+    width: 100%; /* Full width for shortened links */
+    display: flex; /* Use flexbox for layout */
+    margin: 0.5rem 0; /* Margin around shortened links */
+    border-radius: 5px; /* Rounded corners */
+    align-items: center; /* Center items vertically */
+    padding: 0.5rem 1rem; /* Padding for shortened links */
+    justify-content: space-between; /* Space between items */
+    background-color: var(--color-white); /* Background color for shortened links */
+}
+
+.text {
+    width: 40%; /* Width for text element */
+    margin: 5rem auto; /* Margin above and below */
+    text-align: center; /* Center text */
+}
+
+.cards {
+    width: 100%; /* Full width for cards */
+    padding: 2rem; /* Padding for cards */
+    position: relative; /* Relative positioning */
+    border-radius: 5px; /* Rounded corners */
+    background-color: var(--color-white); /* Background color for cards */
+}
+
+.card-1 {
+    top: 40px; /* Position for card 1 */
+}
+
+.card-2 {
+    top: 80px; /* Position for card 2 */
+}
+
+.cards img {
+    top: -2rem; /* Position of images in cards */
+    padding: 1rem; /* Padding around images */
+    position: absolute; /* Absolute positioning for overlap effect */
+    border-radius: 50%; /* Circular images */
+    background-color: var(--very-dark-blue); /* Background color for images */
+}
+
+.banniere {
+    align-items: center; /* Center items vertically in the banner */
+    flex-direction: column; /* Stack items vertically */
+    background-image: url('images/bg-boost-desktop.svg'); /* Background image for banner */
+}
+
+footer {
+    padding: 2rem 7rem; /* Padding for footer */
+    background-color: var(--very-dark-violet); /* Background color for footer */
+    color: var(--color-white); /* Text color for footer */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for footer layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the sections */
+    width: 100%; /* Full width for footer content */
+}
+
+.footer-logo {
+    flex: 1; /* Allow logo to take up space */
+}
+
+.footer-links {
+    display: flex; /* Align all sections horizontally */
+    justify-content: center; /* Center the sections in the middle */
+    flex: 2; /* Allow links section to take more space */
+    margin: 0 2rem; /* Space around the links */
+}
+
+.footer-links div {
+    display: flex; /* Use flexbox for link sections */
+    flex-direction: column; /* Stack items vertically in each section */
+    margin: 0 1rem; /* Space between sections */
+}
+
+.footer-links h4 {
+    margin-bottom: 0.5rem; /* Space between heading and links */
+}
+
+.footer-links a {
+    color: var(--gray); /* Color for footer links */
+    margin-bottom: 0.5rem; /* Space between links */
+}
+
+.footer-links a:hover {
+    color: var(--cyan); /* Hover color for footer links */
+}
+
+.footer-icons {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 15px; /* Space between icons */
+}
+
+.footer-icons img {
+    width: 20px; /* Set size of icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2rem; /* Adjust padding for mobile */
+    }
+    .footer-content {
+        flex-direction: column; /* Stack all items for mobile */
+        align-items: center; /* Center align all items */
+    }
+    .footer-links {
+        margin: 1rem 0; /* Space above and below links */
+    }
+    .footer-icons {
+        justify-content: center; /* Center the icons */
+        margin-top: 1rem; /* Space between links and icons */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    section, footer {
+        padding: 2rem 4rem; /* Adjust padding for tablet screens */
+    }
+    header {
+        margin-bottom: 4rem; /* Space below header */
+        padding-right: 0rem; /* Remove right padding */
+    }  
+    .hero main {
+        flex-direction: column-reverse; /* Reverse column layout */
+    }
+    .hero main div {
+        width: 70%; /* Set width for hero content */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Center text */
+    }
+    .link-section {
+        width: 100%; /* Full width for link section */
+        margin: 0 auto; /* Center link section */
+    }
+    .shortened-link {
+        height: 25vh; /* Height for shortened links */
+        padding: 1rem 2rem; /* Padding for shortened links */
+        align-items: flex-start; /* Align items at the start */
+        flex-direction: column; /* Stack items vertically */
+    }
+    .shortened-link hr {
+        width: 100%; /* Full width for horizontal rule */
+        border-color: var(--gray); /* Border color for horizontal rule */
+    }
+    .copy-button {
+        width: 100%; /* Full width for copy button */
+        margin-left: 0; /* No margin left */
+    }
+    .original-link {
+        text-align: left; /* Left align original links */
+    }
+    input {
+        width: 75%; /* Width for input fields */
+    }
+    .link-converter button {
+        width: 35%; /* Width for buttons in link converter */
+    }
+    .text {
+        width: 80%; /* Width for text element */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        text-align: center; /* Center align body text */
+    }
+    section, footer {
+        padding: 2rem; /* Adjust padding for mobile */
+    }
+    header {
+        margin-bottom: 4rem; /* Space below header */
+        padding-right: 0rem; /* Remove right padding */
+    }
+    header a {
+        display: none; /* Hide header links on mobile */
+    }
+    .icon-menu {
+        display: flex; /* Show icon menu on mobile */
+    }
+    .icon-menu:hover {
+        opacity: 0.5; /* Change opacity on hover */
+    }
+    h1 {
+        font-size: 2em; /* Font size for H1 on mobile */
+    }
+    .mobile-nav {
+        padding: 2rem; /* Padding for mobile navigation */
+        border-radius: 10px; /* Rounded corners for mobile nav */
+        background-color: var(--dark-violet); /* Background color for mobile nav */
+    }
+    .mobile-nav.active {
+        display: block; /* Show active mobile navigation */
+    }
+    .mobile-nav nav {
+        display: flex; /* Use flexbox for mobile nav links */
+        flex-direction: column; /* Stack items vertically */
+    }
+    .mobile-nav a {
+        font-size: 1em; /* Font size for mobile nav links */
+        line-height: 3.5; /* Line height for mobile nav links */
+        color: var(--color-white); /* Text color for mobile nav links */
+        font-weight: var(--font-weight-500); /* Font weight for mobile nav links */
+    }
+    .mobile-nav a:hover {
+        color: var(--cyan); /* Hover color for mobile nav links */
+    }
+    .mobile-nav .cta-login {
+        line-height: 1.7; /* Line height for mobile CTA login */
+    }
+    .mobile-nav .cta-login:hover {
+        color: var(--color-white); /* Hover color for mobile CTA login */
+    }
+    hr {
+        width: 100%; /* Full width for horizontal rule */
+        border: 1px solid var(--grayish-violet); /* Border color for horizontal rule */
+    }
+    .hero main {
+        flex-direction: column-reverse; /* Reverse column layout for hero on mobile */
+    }
+    .illustration-working {
+        left: 0; /* Position of working illustration */
+    }
+    .link-converter {
+        gap: 20px; /* Space between items in link converter */
+        width: 90%; /* Width for link converter */
+        padding: 1rem 2rem; /* Padding for link converter */
+        align-items: center; /* Align items in link converter */
+        flex-direction: column; /* Stack items vertically */
+        background-image: url('images/bg-shorten-mobile.svg'); /* Background image for mobile link converter */
+    }
+    input {
+        width: 80%; /* Width for input fields on mobile */
+        align-self: center; /* Center input fields */
+    }
+    #error-message {
+        margin-left: 10px; /* Space to the left of error message */
+    }
+    .link-converter button {
+        width: 100%; /* Full width for buttons in link converter */
+    }
+    .link-section {
+        width: 100%; /* Full width for link section */
+    }
+    .shortened-link {
+        height: 25vh; /* Height for shortened links */
+        padding: 1rem 2rem; /* Padding for shortened links */
+        align-items: flex-start; /* Align items at the start */
+        flex-direction: column; /* Stack items vertically */
+    }
+    .shortened-link hr {
+        border-color: var(--gray); /* Border color for horizontal rule */
+    }
+    .copy-button {
+        width: 100%; /* Full width for copy button */
+        margin-left: 0; /* No margin left */
+    }
+    .original-link {
+        text-align: left; /* Left align original links */
+    }
+    .text {
+        width: 100%; /* Full width for text element */
+    }
+    .section-statistics main {
+        height: auto; /* Height for statistics section */
+        flex-direction: column; /* Stack items vertically */
+    }
+    .cards img {
+        position: absolute; /* Absolute positioning for card images */
+        left: 50%; /* Center horizontally */
+        top: 0; /* Align to top */
+        transform: translate(-50%, -50%); /* Center image */
+    }    
+    .cards {
+        width: 70%; /* Width for cards */
+        height: auto; /* Height adjusts automatically */
+        margin-bottom: 2.5rem; /* Space below cards */
+    }
+    .card-1, .card-2 {
+        top: 0px; /* Reset position for cards */
+    }
+    .banniere {
+        height: 50vh; /* Height for banner */
+        background-image: url('images/bg-boost-mobile.svg'); /* Background image for mobile banner */
+    }
+    footer {
+        padding-top: 5rem; /* Space above footer content */
+        flex-direction: column; /* Stack items vertically for mobile */
+        align-items: center; /* Center the footer contents */
+    }
+    footer div, .icons {
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+    }
+    .icons {
+        margin-top: 2rem; /* Space between links and icons */
+    }
+}
